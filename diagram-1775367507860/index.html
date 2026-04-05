@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta property="og:title" content="屋外広告物法 図解 — 会社の義務と実務ガイド">
+  <meta property="og:description" content="屋外広告物法と福井県条例に基づく、看板・広告物の許可・維持管理・安全点検に関する会社の義務を図解で整理。">
+  <meta property="og:type" content="article">
+  <title>屋外広告物法 図解 — 会社の義務と実務ガイド</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FFFFFF'/><rect x='8' y='8' width='84' height='84' rx='14' fill='none' stroke='%233B82F6' stroke-width='4'/><circle cx='32' cy='40' r='10' fill='%233B82F6' opacity='0.8'/><circle cx='68' cy='40' r='10' fill='%2360A5FA' opacity='0.8'/><rect x='25' y='62' width='50' height='6' rx='3' fill='%2394A3B8' opacity='0.6'/><rect x='30' y='74' width='40' height='6' rx='3' fill='%2394A3B8' opacity='0.3'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ads: {
+              bg: '#FFFFFF',
+              surface: '#F8FAFC',
+              hover: '#F1F5F9',
+              border: '#E2E8F0',
+              accent: '#3B82F6',
+              'accent-light': '#2563EB',
+              text: '#1E293B',
+              muted: '#64748B',
+              dim: '#94A3B8',
+              positive: '#10B981',
+              negative: '#EF4444',
+              warning: '#F59E0B',
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', '"Hiragino Sans"', '"Hiragino Kaku Gothic ProN"', '"Yu Gothic UI"', '"Meiryo"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { border-top: none !important; }
+      .rounded-xl { break-inside: avoid; }
+      .md\:flex-row { flex-direction: row !important; }
+      .md\:hidden { display: none !important; }
+      .hidden.md\:block { display: block !important; }
+      .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+      .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+      .md\:mb-20 { margin-bottom: 5rem !important; }
+      .md\:py-16 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+      .bg-clip-text.text-transparent {
+        -webkit-background-clip: initial !important;
+        background-clip: initial !important;
+        color: #2563EB !important;
+        -webkit-text-fill-color: #2563EB !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-ads-bg text-slate-600 antialiased leading-relaxed border-t-4 border-ads-accent">
+  <div class="no-print max-w-3xl mx-auto px-5 pt-2 flex justify-end">
+    <button onclick="window.print()" class="flex items-center gap-1.5 text-xs text-ads-dim hover:text-ads-accent transition-colors cursor-pointer">
+      <i data-lucide="download" class="w-3.5 h-3.5"></i>
+      PDF
+    </button>
+  </div>
+  <main class="max-w-3xl mx-auto px-5 py-10 md:py-16">
+
+    <!-- ヘッダー -->
+    <header class="mb-10">
+      <div class="flex items-center gap-2 text-xs text-slate-400 mb-3">
+        <i data-lucide="scale" class="w-3.5 h-3.5"></i>
+        <span>法令図解</span>
+        <span class="mx-1">·</span>
+        <span>2024年12月作成</span>
+      </div>
+      <h1 class="text-3xl font-black text-ads-text leading-tight mb-2">屋外広告物法</h1>
+      <p class="text-slate-500 text-base">看板・広告物の許可・維持管理に関する会社の義務と実務ポイント</p>
+
+      <!-- 重要注意バナー -->
+      <div class="mt-5 bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
+        <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
+        <div>
+          <div class="font-bold text-amber-800 text-sm">この法律は「条例が主役」です</div>
+          <p class="text-amber-700 text-sm mt-1">屋外広告物法（国の法律）は骨格を定めるだけで、<strong>実際の許可基準・禁止場所・サイズ制限は都道府県条例に委任</strong>されています。福井事業所では「福井県屋外広告物条例」が実務上の主たる根拠です。</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Zone 1: 概要 -->
+    <section id="overview" class="mb-8">
+      <div class="bg-white border border-ads-border rounded-2xl p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="book-open" class="w-5 h-5 text-blue-600"></i>
+          </div>
+          <h2 class="text-xl font-bold text-ads-text">この法律は何のため？</h2>
+        </div>
+
+        <!-- 一言サマリー -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-4 mb-5">
+          <p class="font-bold text-blue-900 text-base">良好な景観の形成と、看板倒壊・落下による危険の防止</p>
+          <p class="text-blue-800 text-sm mt-1.5">戦後復興期に無秩序な広告物が急増し、都市景観の混乱と看板の倒壊・落下事故が社会問題化。1949年（昭和24年）に制定されました。2011年の東日本大震災では屋外広告物の倒壊・落下による死傷事故が発生し、老朽化広告物の安全点検義務が強化されています。</p>
+        </div>
+
+        <!-- 3ポイント -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="bg-slate-50 rounded-xl p-4 text-center">
+            <i data-lucide="map-pin" class="w-7 h-7 text-blue-500 mx-auto mb-2"></i>
+            <div class="font-bold text-slate-700 text-sm">場所を選ぶ</div>
+            <div class="text-slate-500 text-xs mt-1">設置できる場所・できない場所が条例で決まっている</div>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-4 text-center">
+            <i data-lucide="file-text" class="w-7 h-7 text-green-500 mx-auto mb-2"></i>
+            <div class="font-bold text-slate-700 text-sm">許可を取る</div>
+            <div class="text-slate-500 text-xs mt-1">多くの看板は設置前に都道府県（または市）の許可が必要</div>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-4 text-center">
+            <i data-lucide="wrench" class="w-7 h-7 text-orange-500 mx-auto mb-2"></i>
+            <div class="font-bold text-slate-700 text-sm">維持管理する</div>
+            <div class="text-slate-500 text-xs mt-1">設置後も安全・良好な状態を保ち続ける義務がある</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zone 2: 対象 -->
+    <section id="target" class="mb-8">
+      <div class="bg-white border border-ads-border rounded-2xl p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 bg-indigo-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="building-2" class="w-5 h-5 text-indigo-600"></i>
+          </div>
+          <h2 class="text-xl font-bold text-ads-text">誰に・何が対象になる？</h2>
+        </div>
+
+        <!-- 対象者チップ -->
+        <p class="text-sm text-slate-500 mb-3">業種・規模を問わず、屋外に広告物を掲示するすべての事業者が対象です。</p>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 border-2 border-blue-300 px-3 py-1.5 rounded-full text-sm font-bold">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            社名看板・入口看板を持つ会社
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 border-2 border-blue-300 px-3 py-1.5 rounded-full text-sm font-bold">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            案内板・誘導サインを設置している会社
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 border-2 border-blue-300 px-3 py-1.5 rounded-full text-sm font-bold">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            横断幕・懸垂幕を掲示している会社
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-400 border-2 border-slate-200 px-3 py-1.5 rounded-full text-sm line-through">
+            <i data-lucide="x-circle" class="w-4 h-4"></i>
+            危険物・安全の警告掲示板（商業的告知性がないため対象外のことが多い）
+          </span>
+        </div>
+
+        <!-- 「屋外広告物」の定義 -->
+        <div class="bg-violet-50 border-l-4 border-violet-400 rounded-r-xl p-4 mb-4">
+          <div class="flex items-start gap-2">
+            <i data-lucide="lightbulb" class="w-5 h-5 text-violet-500 flex-shrink-0 mt-0.5"></i>
+            <div>
+              <div class="font-bold text-violet-800 text-sm">「屋外広告物」とは？（法第2条）</div>
+              <p class="text-violet-700 text-sm mt-1">常時または一定期間継続して<strong>屋外で公衆に表示されるもの</strong>。看板・立看板・貼り紙・貼り札・広告塔・広告板・建物その他の工作物等に掲出・表示されたものすべてが含まれます。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 当社への判定 -->
+        <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i>
+            <span class="font-bold text-green-800 text-sm">当社（福井事業所）への適用</span>
+          </div>
+          <p class="text-green-700 text-sm">化学工場であっても業種による除外はありません。敷地内の社名看板・案内板等を設置・管理する「広告物の表示者・設置者」として本法の適用を受けます。実務上は<strong>福井県屋外広告物条例</strong>の内容確認が最優先です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zone 3: 会社の義務 -->
+    <section id="obligation" class="mb-8">
+      <div class="bg-white border border-ads-border rounded-2xl p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-9 h-9 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="clipboard-list" class="w-5 h-5 text-red-600"></i>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-ads-text">会社がしなければならないこと</h2>
+            <p class="text-slate-400 text-xs mt-0.5">事業者（会社）の義務事項 — 法第3〜8条・第13条ほか</p>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 mb-5 ml-12">※詳細な許可基準・禁止場所は<strong>福井県屋外広告物条例</strong>で確認してください</p>
+
+        <div class="space-y-3">
+
+          <!-- 禁止規定グループ -->
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 mt-2">禁止規定（やってはいけないこと）</div>
+
+          <!-- 禁止1 -->
+          <div class="bg-red-50 border-l-4 border-red-400 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">禁</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">禁止地域・禁止物件への広告物の掲示・設置</span>
+                  <span class="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">常時禁止</span>
+                </div>
+                <p class="text-slate-600 text-sm">都市計画区域内の一定地域（景観地区・風致地区・国立公園内など）は禁止または特別規制区域に指定されている場合があります。条例で禁止場所が定められているため、設置前に必ず確認が必要です。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 屋外広告物法 第3条・福井県屋外広告物条例</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 禁止2 -->
+          <div class="bg-red-50 border-l-4 border-red-400 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">禁</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">善良な風俗に反する内容の表示</span>
+                  <span class="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">常時禁止</span>
+                </div>
+                <p class="text-slate-600 text-sm">広告物の表示内容が公序良俗に反するものは禁止されています。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 屋外広告物法 第3条第2項・都道府県条例</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 禁止3 -->
+          <div class="bg-red-50 border-l-4 border-red-400 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">禁</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">道路標識・信号機と誤認させる広告物の表示</span>
+                  <span class="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">常時禁止</span>
+                </div>
+                <p class="text-slate-600 text-sm">道路標識・信号機・道路案内標識に類似した色彩・デザインの広告物は交通事故につながるため禁止されています。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 道路法・各都道府県条例（関連）</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 義務グループ -->
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 mt-5">義務（しなければならないこと）</div>
+
+          <!-- 義務1: 許可取得 ★最重要 -->
+          <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">1</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">許可地域での広告物表示・設置前に許可を取得する</span>
+                  <span class="bg-orange-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">設置前・更新時</span>
+                  <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-0.5 rounded-full border border-amber-300">★ 最重要</span>
+                </div>
+                <p class="text-slate-600 text-sm">許可地域に看板・広告物を設置する場合は、<strong>設置前に都道府県知事または市長の許可</strong>が必要です。許可には期間があり、期間満了前に更新申請が必要です。無許可設置は30万円以下の罰金の対象となります。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 屋外広告物法 第4条</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 義務2: 許可事項の遵守 -->
+          <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">2</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">許可を受けた内容どおりに表示・設置する</span>
+                  <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">常時</span>
+                </div>
+                <p class="text-slate-600 text-sm">許可を受けた広告物は、申請した内容（場所・サイズ・色彩・文言等）どおりに設置・維持しなければなりません。変更する場合は改めて許可申請が必要になることがあります。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 屋外広告物法 第4条・第5条</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 義務3: 良好な状態の維持管理 -->
+          <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">3</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">広告物を良好な状態に保つ（汚損・色褪せ・破損の防止）</span>
+                  <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">常時</span>
+                </div>
+                <p class="text-slate-600 text-sm">設置した広告物は常に清潔かつ良好な状態を維持しなければなりません。著しく汚損・退色・破損した広告物を放置することは義務違反となります。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 屋外広告物法 第7条</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 義務4: 安全性の維持管理 -->
+          <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">4</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">広告物・支柱の安全性を維持する（倒壊・落下防止）</span>
+                  <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">常時</span>
+                </div>
+                <p class="text-slate-600 text-sm">老朽化・腐食・破損による倒壊・落下が生じないよう安全性を保つことが義務です。東日本大震災以降、老朽化広告物の安全点検に関するガイドラインが整備されています。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 屋外広告物法 第7条</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 義務5: 除却義務 -->
+          <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">5</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">許可期間満了・違反発生時に広告物を除却する</span>
+                  <span class="bg-orange-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">期間満了時・都度</span>
+                </div>
+                <p class="text-slate-600 text-sm">許可期間が満了した広告物や禁止事由が生じた広告物は、速やかに撤去する義務があります。行政から除却命令が出た場合は必ず従わなければなりません（命令不遵守は罰金の対象）。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 屋外広告物法 第7条・第8条</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 義務6: 立入検査への協力 -->
+          <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">6</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">行政の立入検査・報告要求に協力する（拒否・虚偽報告は禁止）</span>
+                  <span class="bg-orange-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">検査時・都度</span>
+                </div>
+                <p class="text-slate-600 text-sm">行政庁（都道府県・市）から立入検査や書類提出を求められた場合は、誠実に対応しなければなりません。拒否・妨害・虚偽報告は20万円以下の罰金の対象となります。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 屋外広告物法 第13条</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 努力義務グループ -->
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 mt-5">努力義務（できる限り取り組むべきこと）</div>
+
+          <!-- 努力義務1: 自主点検 -->
+          <div class="bg-slate-50 border-l-4 border-slate-300 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-slate-400 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">努</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">景観上・安全上の観点から自主的に点検・維持管理に努める</span>
+                  <span class="bg-slate-400 text-white text-xs font-bold px-2 py-0.5 rounded-full">努力義務</span>
+                  <span class="text-xs text-slate-500">（目安：年1回以上）</span>
+                </div>
+                <p class="text-slate-600 text-sm">法的義務ではありませんが、安全事故防止のため定期的な目視点検と記録保存が強く推奨されています。国土交通省ガイドラインでも年1回以上の点検が目安とされています。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 屋外広告物法 第7条・国土交通省ガイドライン</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 努力義務2: 老朽化看板の自主除却 -->
+          <div class="bg-slate-50 border-l-4 border-slate-300 rounded-r-xl p-4">
+            <div class="flex items-start gap-2.5 flex-wrap">
+              <div class="w-6 h-6 bg-slate-400 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">努</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="font-bold text-slate-800 text-sm">老朽化した広告物の自主的な除却・更新に努める</span>
+                  <span class="bg-slate-400 text-white text-xs font-bold px-2 py-0.5 rounded-full">努力義務</span>
+                  <span class="text-xs text-slate-500">（老朽化確認時）</span>
+                </div>
+                <p class="text-slate-600 text-sm">老朽化・腐食が進んだ看板は、行政から除却命令が出る前に自主的に撤去・更新することが推奨されています。地震等の災害時の倒壊リスク対策としても重要です。</p>
+                <p class="text-xs text-slate-400 mt-1.5">根拠: 屋外広告物法 第7条・国土交通省ガイドライン</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 屋外広告業者の場合の注記 -->
+        <div class="mt-5 bg-slate-50 border border-slate-200 rounded-xl p-4">
+          <div class="flex items-start gap-2">
+            <i data-lucide="info" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+            <div>
+              <p class="text-sm font-bold text-slate-600">屋外広告業（他社の依頼で看板設置を行う場合）の追加義務</p>
+              <p class="text-slate-500 text-xs mt-1">他人の依頼を受けて報酬を得て広告物を設置する「屋外広告業者」には、①都道府県知事への登録（3年ごと更新）、②営業所ごとの業務主任者選任、③業務主任者の講習受講が義務付けられます。<strong>当社は自社看板の設置者であるため、これらの義務は通常該当しません。</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zone 4: 現場での対応（役割別） -->
+    <section id="practice" class="mb-8">
+      <div class="bg-white border border-ads-border rounded-2xl p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="users" class="w-5 h-5 text-green-600"></i>
+          </div>
+          <h2 class="text-xl font-bold text-ads-text">現場での対応（役割別）</h2>
+        </div>
+
+        <!-- 福井事業所での具体場面 -->
+        <div class="mb-5 bg-blue-50 border border-blue-100 rounded-xl p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-blue-500"></i>
+            <span class="font-bold text-blue-800 text-sm">福井事業所での主な対象広告物</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div class="flex items-center gap-2 text-sm text-blue-700">
+              <i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0"></i>
+              <span>正門・入口の社名看板</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-blue-700">
+              <i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0"></i>
+              <span>敷地内の方向案内板・建屋名称板</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-blue-700">
+              <i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0"></i>
+              <span>採用・求人の横断幕・懸垂幕</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-blue-700">
+              <i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0"></i>
+              <span>道路沿い・敷地外の広告物（最重要規制対象）</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+
+          <!-- 施設管理担当者（管理者）がすること -->
+          <div class="bg-green-50 border border-green-100 rounded-xl p-4">
+            <div class="flex items-start gap-3">
+              <i data-lucide="user-check" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+              <div class="flex-1">
+                <div class="mb-2">
+                  <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full border border-blue-300">施設管理担当者・総務担当者がすること</span>
+                </div>
+                <div class="font-bold text-slate-800 text-sm">設置前の許可申請手続き</div>
+                <div class="text-slate-600 text-sm mt-1">新たに看板・広告物を設置する際は、福井県（または市）へ事前に許可申請を行います。許可が下りるまで設置してはいけません。許可申請に必要な書類（図面・仕様書等）を準備します。</div>
+                <div class="mt-2 flex items-center gap-2 text-xs text-slate-400">
+                  <i data-lucide="scale" class="w-3 h-3"></i>
+                  <span>根拠: 屋外広告物法 第4条（許可の取得義務）</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-green-50 border border-green-100 rounded-xl p-4">
+            <div class="flex items-start gap-3">
+              <i data-lucide="user-check" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+              <div class="flex-1">
+                <div class="mb-2">
+                  <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full border border-blue-300">施設管理担当者・総務担当者がすること</span>
+                </div>
+                <div class="font-bold text-slate-800 text-sm">許可台帳の作成と更新期限の管理</div>
+                <div class="text-slate-600 text-sm mt-1">取得した許可の内容（許可番号・期間・設置場所・広告物の仕様）を台帳で一元管理します。許可期間満了の前に更新申請を行い、期限切れの無許可状態にならないよう管理します。</div>
+                <div class="mt-2 flex items-center gap-2 text-xs text-slate-400">
+                  <i data-lucide="scale" class="w-3 h-3"></i>
+                  <span>根拠: 屋外広告物法 第4条・第5条（許可事項の遵守義務）</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-green-50 border border-green-100 rounded-xl p-4">
+            <div class="flex items-start gap-3">
+              <i data-lucide="user-check" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+              <div class="flex-1">
+                <div class="mb-2">
+                  <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full border border-blue-300">施設管理担当者・総務担当者がすること</span>
+                </div>
+                <div class="font-bold text-slate-800 text-sm">年1回の目視点検と記録保存</div>
+                <div class="text-slate-600 text-sm mt-1">敷地内の全看板・広告物について、年1回程度の目視点検を実施します。支柱の腐食・ボルトの緩み・パネルの破損・色褪せ・汚れを確認し、点検記録を保存します（地震対策も兼ねる）。</div>
+                <div class="mt-2 flex items-center gap-2 text-xs text-slate-400">
+                  <i data-lucide="scale" class="w-3 h-3"></i>
+                  <span>根拠: 屋外広告物法 第7条（安全性・良好な状態の維持管理義務）・国土交通省ガイドライン</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-green-50 border border-green-100 rounded-xl p-4">
+            <div class="flex items-start gap-3">
+              <i data-lucide="user-check" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+              <div class="flex-1">
+                <div class="mb-2">
+                  <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full border border-blue-300">施設管理担当者・総務担当者がすること</span>
+                </div>
+                <div class="font-bold text-slate-800 text-sm">変更・撤去時の手続き</div>
+                <div class="text-slate-600 text-sm mt-1">社名変更・デザイン変更・看板の増設・改修を行う際は、許可内容の変更申請が必要になる場合があります。許可期間満了や不要になった看板は速やかに除却します。</div>
+                <div class="mt-2 flex items-center gap-2 text-xs text-slate-400">
+                  <i data-lucide="scale" class="w-3 h-3"></i>
+                  <span>根拠: 屋外広告物法 第7条・第8条（除却義務）</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 全社員がすること -->
+          <div class="bg-green-50 border border-green-100 rounded-xl p-4">
+            <div class="flex items-start gap-3">
+              <i data-lucide="users" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
+              <div class="flex-1">
+                <div class="mb-2">
+                  <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full border border-green-300">社員（現場担当）がすること</span>
+                </div>
+                <div class="font-bold text-slate-800 text-sm">破損・異状を発見したら施設管理担当者に報告する</div>
+                <div class="text-slate-600 text-sm mt-1">看板の傾き・パネルの脱落・支柱の腐食・塗装の剥がれなど、異常に気づいた場合はすぐに施設管理担当者に報告してください。特に台風・地震後は注意が必要です。</div>
+                <div class="mt-2 flex items-center gap-2 text-xs text-slate-400">
+                  <i data-lucide="scale" class="w-3 h-3"></i>
+                  <span>根拠: 屋外広告物法 第7条（安全性維持義務）</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 横断幕・懸垂幕 特記 -->
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
+            <div class="flex items-start gap-3">
+              <i data-lucide="triangle-alert" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
+              <div class="flex-1">
+                <div class="mb-2">
+                  <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full border border-amber-300">施設管理担当者・人事・採用担当がすること</span>
+                </div>
+                <div class="font-bold text-slate-800 text-sm">採用・求人の横断幕・懸垂幕は掲示前に許可確認</div>
+                <div class="text-slate-600 text-sm mt-1">求人・採用目的の横断幕・懸垂幕は許可が必要な場合があります。表示期間・サイズ・設置場所が福井県条例の基準に適合しているかを事前に確認してください。無断掲示は罰金の対象となります。</div>
+                <div class="mt-2 flex items-center gap-2 text-xs text-slate-400">
+                  <i data-lucide="scale" class="w-3 h-3"></i>
+                  <span>根拠: 屋外広告物法 第4条・福井県屋外広告物条例</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 化学工場特有の注意点 -->
+        <div class="mt-5 bg-slate-50 border border-slate-200 rounded-xl p-4">
+          <div class="flex items-start gap-2">
+            <i data-lucide="flask-conical" class="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5"></i>
+            <div>
+              <p class="text-sm font-bold text-slate-700">化学工場固有の留意点</p>
+              <p class="text-slate-500 text-xs mt-1">消防法・高圧ガス保安法上の「危険物施設」「保安物件からの距離」規制と広告物の設置場所が干渉する場合があります（例：危険物倉庫周辺への金属製広告塔設置は消防署との調整が必要）。一方、消防法・安全衛生法上の義務として設置する<strong>危険物警告板・安全注意看板は「商業的告知性」がないため屋外広告物法の対象外</strong>となることが多いです。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- アクションサマリー -->
+    <section id="action" class="mb-8">
+      <div class="bg-white border border-ads-border rounded-2xl p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="clipboard-check" class="w-5 h-5 text-purple-600"></i>
+          </div>
+          <h2 class="text-xl font-bold text-ads-text">今すぐ確認すべきこと（優先度順）</h2>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex items-start gap-3 bg-red-50 border border-red-100 rounded-xl p-4">
+            <div class="w-7 h-7 bg-red-500 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">A</div>
+            <div>
+              <div class="font-bold text-slate-800 text-sm">即確認</div>
+              <ul class="text-slate-600 text-sm mt-1 space-y-1">
+                <li class="flex items-start gap-2"><i data-lucide="arrow-right" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-red-400"></i>現在設置中の全屋外広告物の許可取得状況を棚卸し</li>
+                <li class="flex items-start gap-2"><i data-lucide="arrow-right" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-red-400"></i>福井県屋外広告物条例の許可要件・禁止区域を確認</li>
+                <li class="flex items-start gap-2"><i data-lucide="arrow-right" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-red-400"></i>老朽化・破損している看板の安全点検を実施</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-amber-50 border border-amber-100 rounded-xl p-4">
+            <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">B</div>
+            <div>
+              <div class="font-bold text-slate-800 text-sm">定期管理</div>
+              <ul class="text-slate-600 text-sm mt-1 space-y-1">
+                <li class="flex items-start gap-2"><i data-lucide="arrow-right" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-amber-400"></i>許可期間の更新管理（台帳化）</li>
+                <li class="flex items-start gap-2"><i data-lucide="arrow-right" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-amber-400"></i>年1回の目視点検・記録保存</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-blue-50 border border-blue-100 rounded-xl p-4">
+            <div class="w-7 h-7 bg-blue-500 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">C</div>
+            <div>
+              <div class="font-bold text-slate-800 text-sm">変更・新設時</div>
+              <ul class="text-slate-600 text-sm mt-1 space-y-1">
+                <li class="flex items-start gap-2"><i data-lucide="arrow-right" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-blue-400"></i>社名変更・新設・増設時の事前許可申請（総務・施設管理の手続きフロー整備）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mb-8">
+      <div class="bg-white border border-ads-border rounded-2xl p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 bg-violet-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="message-circle-question" class="w-5 h-5 text-violet-600"></i>
+          </div>
+          <h2 class="text-xl font-bold text-ads-text">よくある質問</h2>
+        </div>
+
+        <div class="space-y-4">
+
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <div class="flex items-start gap-3 p-4 bg-slate-50">
+              <span class="font-black text-blue-600 flex-shrink-0">Q</span>
+              <p class="text-slate-800 font-medium text-sm">敷地の中に設置した看板も許可が必要ですか？</p>
+            </div>
+            <div class="flex items-start gap-3 p-4">
+              <span class="font-black text-green-600 flex-shrink-0">A</span>
+              <p class="text-slate-600 text-sm">条例によっては「自家用広告物（自社敷地内で自社名を表示するもの）」の例外規定があり、一定の条件下では許可不要となる場合があります。ただし、サイズ・高さ・場所によっては許可が必要です。<strong>福井県屋外広告物条例の自家用広告物の規定を必ず確認してください。</strong></p>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <div class="flex items-start gap-3 p-4 bg-slate-50">
+              <span class="font-black text-blue-600 flex-shrink-0">Q</span>
+              <p class="text-slate-800 font-medium text-sm">危険物の警告掲示板（「危険物 第4類」など）も屋外広告物法の対象ですか？</p>
+            </div>
+            <div class="flex items-start gap-3 p-4">
+              <span class="font-black text-green-600 flex-shrink-0">A</span>
+              <p class="text-slate-600 text-sm">消防法・安全衛生法によって設置を義務付けられている警告板・注意看板は、商業的な告知目的がないため「屋外広告物」には該当しないことが多く、屋外広告物法の規制対象外となるケースがほとんどです。ただし、設置場所や表示内容によっては確認が必要な場合もあります。</p>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <div class="flex items-start gap-3 p-4 bg-slate-50">
+              <span class="font-black text-blue-600 flex-shrink-0">Q</span>
+              <p class="text-slate-800 font-medium text-sm">既設の古い看板が無許可だった場合どうなりますか？</p>
+            </div>
+            <div class="flex items-start gap-3 p-4">
+              <span class="font-black text-green-600 flex-shrink-0">A</span>
+              <p class="text-slate-600 text-sm">まず早急に行政（福井県または市の担当課）に相談することをお勧めします。多くの場合、是正勧告（指導）から始まり、除却命令・代執行という順になります。自主的に相談した場合は行政の対応も柔軟になることが多いです。放置して行政から除却命令を受けると30万円以下の罰金の対象になります。</p>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <div class="flex items-start gap-3 p-4 bg-slate-50">
+              <span class="font-black text-blue-600 flex-shrink-0">Q</span>
+              <p class="text-slate-800 font-medium text-sm">電子掲示板（デジタルサイネージ）も規制されますか？</p>
+            </div>
+            <div class="flex items-start gap-3 p-4">
+              <span class="font-black text-green-600 flex-shrink-0">A</span>
+              <p class="text-slate-600 text-sm">デジタルサイネージ（電子広告板）も屋外広告物として規制の対象となる場合があります。2021〜2022年にかけて国土交通省がガイドラインを整備しており、各都道府県が順次条例対応を進めています。設置前に福井県の最新条例・担当課へ確認することを推奨します。</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 参考: 法令の構造・根拠一覧 -->
+    <section id="structure" class="mb-8">
+      <div class="bg-white border border-ads-border rounded-2xl p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 bg-slate-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="layers" class="w-5 h-5 text-slate-600"></i>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-ads-text">参考: 法令の構造・根拠一覧</h2>
+            <p class="text-slate-400 text-xs mt-0.5">「どの条文に書いてあるか」を確認したいときに</p>
+          </div>
+        </div>
+
+        <!-- 法令階層構造 -->
+        <div class="border-2 border-slate-200 rounded-xl overflow-hidden mb-6">
+          <!-- 法律 -->
+          <div class="flex items-center gap-3 p-4 bg-slate-50 border-b border-slate-200">
+            <span class="bg-slate-800 text-white text-xs font-bold px-2.5 py-0.5 rounded-full whitespace-nowrap">法律</span>
+            <div class="flex-1 min-w
