@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エアコン設置・更新時の法令手続き 図解 - 会社の義務と実務ガイド</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+
+    .header-gradient {
+      background: linear-gradient(135deg, #1e3a5f 0%, #1e4976 50%, #155e75 100%);
+    }
+
+    .pdf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      color: #1e3a5f;
+      border: 2px solid #1e3a5f;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .pdf-btn:hover {
+      background: #1e3a5f;
+      color: white;
+    }
+
+    @media print {
+      .pdf-bar   { display: none !important; }
+      .toc       { display: none !important; }
+      body       { background: white; }
+      .section-card {
+        box-shadow: none;
+        border: 1px solid #e2e8f0;
+        break-inside: avoid;
+      }
+      header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    .section-card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .term-explain {
+      background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+      border-left: 4px solid #9333ea;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      margin: 1.5rem 0;
+    }
+    .term-word { color: #7c3aed; }
+
+    .law-hierarchy-box {
+      border: 2px solid #e2e8f0;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    .law-row {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      gap: 1rem;
+    }
+    .law-row:last-child { border-bottom: none; }
+    .law-badge-strong {
+      background: #1e3a5f;
+      color: white;
+      padding: 0.125rem 0.625rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .law-badge-medium {
+      background: #0369a1;
+      color: white;
+      padding: 0.125rem 0.625rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .law-badge-weak {
+      background: #64748b;
+      color: white;
+      padding: 0.125rem 0.625rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .obligation-card {
+      background: #eff6ff;
+      border-left: 4px solid #1d4ed8;
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .obligation-card-green {
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .obligation-card-orange {
+      background: #fff7ed;
+      border-left: 4px solid #ea580c;
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .obligation-card-amber {
+      background: #fffbeb;
+      border-left: 4px solid #d97706;
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+
+    .practice-card {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+    }
+
+    .badge-required {
+      background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+      color: white;
+      padding: 0.125rem 0.625rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .badge-conditional {
+      background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+      color: white;
+      padding: 0.125rem 0.625rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .badge-new {
+      background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+      color: white;
+      padding: 0.125rem 0.625rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .badge-notice {
+      background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%);
+      color: white;
+      padding: 0.125rem 0.625rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .badge-effort {
+      background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
+      color: white;
+      padding: 0.125rem 0.625rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .target-chip-active {
+      background: #dbeafe;
+      color: #1d4ed8;
+      border: 2px solid #3b82f6;
+      padding: 0.375rem 1rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+    .target-chip-inactive {
+      background: #f1f5f9;
+      color: #94a3b8;
+      border: 2px solid #e2e8f0;
+      padding: 0.375rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      text-decoration: line-through;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    .flow-step {
+      background: white;
+      border: 2px solid #bfdbfe;
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+    }
+    .flow-step-header {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      margin-bottom: 0.5rem;
+    }
+    .flow-num {
+      background: #1d4ed8;
+      color: white;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .flow-arrow-down {
+      display: flex;
+      justify-content: center;
+      color: #94a3b8;
+      margin: 0.375rem 0;
+    }
+
+    .toc {
+      position: fixed;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: white;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      max-height: 80vh;
+      overflow-y: auto;
+      z-index: 50;
+      min-width: 180px;
+    }
+    @media (max-width: 1280px) { .toc { display: none; } }
+
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #1e3a5f;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.6rem;
+      border-radius: 9999px;
+      white-space: nowrap;
+    }
+    .step-badge-green {
+      background: #15803d;
+    }
+    .step-badge-orange {
+      background: #c2410c;
+    }
+    .step-badge-amber {
+      background: #b45309;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ヘッダー -->
+  <header class="header-gradient text-white py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center gap-2 mb-2 opacity-80 text-sm">
+        <i data-lucide="scale" class="w-4 h-4"></i>
+        <span>法令図解</span>
+        <span class="ml-2">2025年7月作成</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold">エアコン設置・更新時の法令手続き</h1>
+      <p class="mt-2 text-lg opacity-90">フロン排出抑制法を中心に ── 設置前から廃棄まで会社がすべきこと</p>
+    </div>
+  </header>
+
+  <!-- PDFダウンロードバー -->
+  <div class="pdf-bar bg-white border-b border-gray-200 py-3">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+      <p class="text-sm text-gray-500">このページは印刷またはPDF保存できます</p>
+      <button class="pdf-btn" onclick="window.print()">
+        <i data-lucide="printer" class="w-4 h-4"></i>
+        PDFで保存・印刷
+      </button>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="max-w-4xl mx-auto px-4 py-8">
+
+    <!-- 施設担当者向けサマリー -->
+    <div class="bg-sky-700 text-white rounded-2xl p-5 mb-6 shadow">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="clipboard-check" class="w-5 h-5 flex-shrink-0"></i>
+        <p class="font-bold text-lg">エアコンを設置・更新するとき ── まずここだけ確認</p>
+      </div>
+      <div class="grid gap-2 md:grid-cols-3">
+        <div class="bg-white bg-opacity-20 rounded-xl p-3 text-sm">
+          <p class="font-bold mb-1">設置前にやること</p>
+          <ul class="space-y-1">
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"></i>業務用か・フロン冷媒か確認</li>
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"></i>危険物エリアなら防爆仕様か確認</li>
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"></i>エネルギー管理者・衛生管理者に報告</li>
+          </ul>
+        </div>
+        <div class="bg-white bg-opacity-20 rounded-xl p-3 text-sm">
+          <p class="font-bold mb-1">工事・設置時にやること</p>
+          <ul class="space-y-1">
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"></i>フロン充填は有資格業者に依頼</li>
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"></i>充填証明書を受領・3年保存</li>
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"></i>電気工事士による施工</li>
+          </ul>
+        </div>
+        <div class="bg-white bg-opacity-20 rounded-xl p-3 text-sm">
+          <p class="font-bold mb-1">設置後・定常管理</p>
+          <ul class="space-y-1">
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"></i>3ヶ月に1回：目視による簡易点検</li>
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"></i>1年or3年に1回：有資格者による定期点検</li>
+            <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"></i>廃棄時はフロン回収・引取証明書保存</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-xs mt-3 opacity-80">詳しくはSTEPごとに解説しています。まず「どの法律が関係するか」は次のセクションで確認してください。</p>
+    </div>
+
+    <!-- Zone 1: 概要 -->
+    <div class="section-card" id="overview">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+          <i data-lucide="book-open" class="w-5 h-5 text-blue-600"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-800">関係する法律は何か・なぜ守るのか</h2>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl mb-5">
+        <p class="font-bold text-blue-900 text-base">業務用エアコンは「設置して終わり」ではない</p>
+        <p class="text-blue-800 mt-1 text-sm">
+          業務用エアコンには冷媒として<span class="font-bold">フロン類（HFC等）</span>が使われており、大気中に漏れると地球温暖化を引き起こします。また化学工場特有の事情（危険物エリア・有害物作業場の換気）も考慮が必要です。設置から廃棄まで一連の法令義務があります。
+        </p>
+      </div>
+
+      <div class="grid gap-3 md:grid-cols-3 mb-4">
+        <div class="bg-cyan-50 rounded-xl p-4 text-center border border-cyan-200">
+          <i data-lucide="wind" class="w-8 h-8 text-cyan-600 mx-auto mb-2"></i>
+          <div class="font-bold text-gray-700 text-sm">🥇 フロン排出抑制法</div>
+          <div class="text-gray-600 text-xs mt-1">設置から廃棄まで管理義務。最も関係する場面が多い</div>
+        </div>
+        <div class="bg-orange-50 rounded-xl p-4 text-center border border-orange-200">
+          <i data-lucide="shield" class="w-8 h-8 text-orange-500 mx-auto mb-2"></i>
+          <div class="font-bold text-gray-700 text-sm">🥈 労働安全衛生法</div>
+          <div class="text-gray-600 text-xs mt-1">化学工場特有：防爆・換気への影響に注意</div>
+        </div>
+        <div class="bg-green-50 rounded-xl p-4 text-center border border-green-200">
+          <i data-lucide="zap" class="w-8 h-8 text-green-600 mx-auto mb-2"></i>
+          <div class="font-bold text-gray-700 text-sm">🥉 省エネ法・電気事業法</div>
+          <div class="text-gray-600 text-xs mt-1">エネルギー管理者・電気主任技術者への確認</div>
+        </div>
+      </div>
+
+      <!-- 関係法令の全体像 -->
+      <div class="bg-slate-50 rounded-xl p-4">
+        <p class="text-sm font-bold text-slate-600 mb-3 flex items-center gap-2">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+          関係する法律の一覧
+        </p>
+        <div class="grid gap-2 md:grid-cols-2">
+          <div class="flex items-center gap-2 bg-white rounded-lg p-2 border border-slate-200">
+            <span class="w-2 h-2 rounded-full bg-cyan-500 flex-shrink-0"></span>
+            <span class="text-sm font-bold text-gray-700">フロン排出抑制法</span>
+            <span class="text-xs text-gray-500">（環境省・経産省）</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white rounded-lg p-2 border border-slate-200">
+            <span class="w-2 h-2 rounded-full bg-orange-500 flex-shrink-0"></span>
+            <span class="text-sm font-bold text-gray-700">労働安全衛生法</span>
+            <span class="text-xs text-gray-500">（厚生労働省）</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white rounded-lg p-2 border border-slate-200">
+            <span class="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>
+            <span class="text-sm font-bold text-gray-700">省エネ法</span>
+            <span class="text-xs text-gray-500">（経済産業省）</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white rounded-lg p-2 border border-slate-200">
+            <span class="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"></span>
+            <span class="text-sm font-bold text-gray-700">電気事業法</span>
+            <span class="text-xs text-gray-500">（経済産業省）</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white rounded-lg p-2 border border-slate-200">
+            <span class="w-2 h-2 rounded-full bg-gray-400 flex-shrink-0"></span>
+            <span class="text-sm font-bold text-gray-700">建築基準法</span>
+            <span class="text-xs text-gray-500">（国土交通省）※要否判定</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white rounded-lg p-2 border border-slate-200">
+            <span class="w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></span>
+            <span class="text-sm font-bold text-gray-700">消防法・廃棄物処理法</span>
+            <span class="text-xs text-gray-500">（危険物エリア・廃棄時）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 用語解説：フロン類・第一種特定製品 -->
+    <div class="term-explain">
+      <div class="flex items-start gap-3">
+        <i data-lucide="lightbulb" class="w-6 h-6 text-purple-500 flex-shrink-0 mt-0.5"></i>
+        <div>
+          <div class="term-word text-lg font-bold">「フロン類」「第一種特定製品」「ton-CO₂」とは？</div>
+          <div class="mt-2 text-gray-700 text-sm space-y-2">
+            <div>
+              <span class="font-bold text-purple-700">フロン類（HFC等）</span>：エアコンや冷凍機の冷媒として使われる化学物質。大気中に漏れると二酸化炭素の数百〜数千倍の温暖化効果をもたらす。
+            </div>
+            <div>
+              <span class="font-bold text-purple-700">第一種特定製品</span>：業務用のエアコン・冷凍冷蔵機器のこと。家庭用（ルームエアコン）は対象外。フロン排出抑制法で管理義務が課される製品。
+            </div>
+            <div>
+              <span class="font-bold text-purple-700">ton-CO₂（二酸化炭素換算トン）</span>：フロンの温暖化への影響を「CO₂何トン分か」で表した数値。機器に充填されているフロンの量（kg）× 地球温暖化係数（GWP）で計算する。50ton-CO₂を超えると点検義務が発生する基準となる。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zone 2: 対象 -->
+    <div class="section-card" id="target">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center">
+          <i data-lucide="building-2" class="w-5 h-5 text-indigo-600"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-800">どんなエアコンが対象？</h2>
+      </div>
+
+      <p class="text-gray-600 mb-4 text-sm">フロン排出抑制法の管理義務が発生するかどうかは、機器の種類で決まります。</p>
+
+      <div class="grid gap-4 md:grid-cols-2 mb-4">
+        <div class="bg-cyan-50 rounded-xl p-4 border border-cyan-200">
+          <div class="flex items-center gap-2 mb-2">
+            <i data-lucide="check-circle" class="w-5 h-5 text-cyan-600"></i>
+            <span class="font-bold text-cyan-800">対象（第一種特定製品）</span>
+          </div>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li class="flex items-start gap-1.5"><span class="text-cyan-600 font-bold">→</span> 業務用エアコン（工場・事務所用）</li>
+            <li class="flex items-start gap-1.5"><span class="text-cyan-600 font-bold">→</span> 業務用冷凍・冷蔵機器</li>
+            <li class="flex items-start gap-1.5"><span class="text-cyan-600 font-bold">→</span> フロン類（HFC・HCFC等）を冷媒に使用するもの</li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+          <div class="flex items-center gap-2 mb-2">
+            <i data-lucide="x-circle" class="w-5 h-5 text-gray-400"></i>
+            <span class="font-bold text-gray-500">対象外</span>
+          </div>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li class="flex items-start gap-1.5 line-through"><span>家庭用ルームエアコン</span></li>
+            <li class="flex items-start gap-1.5 line-through"><span>フロン不使用の冷却機器</span></li>
+            <li class="flex items-start gap-1.5 line-through"><span>自然冷媒（CO₂・アンモニア）機器</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 定期点検の義務が発生する条件 -->
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-3">
+        <p class="font-bold text-amber-800 mb-3 flex items-center gap-2">
+          <i data-lucide="triangle-alert" class="w-4 h-4"></i>
+          定期点検の義務が発生する条件（フロン量による）
+        </p>
+        <div class="grid gap-3 md:grid-cols-3">
+          <div class="bg-white rounded-lg p-3 border border-amber-200 text-center">
+            <div class="font-bold text-gray-700 text-sm mb-1">すべての機器</div>
+            <div class="text-2xl font-bold text-amber-600">3ヶ月<span class="text-sm">に1回</span></div>
+            <div class="text-xs text-gray-500 mt-1">簡易点検（目視）</div>
+          </div>
+          <div class="bg-white rounded-lg p-3 border border-orange-300 text-center">
+            <div class="font-bold text-gray-700 text-sm mb-1">50 ton-CO₂以上</div>
+            <div class="text-2xl font-bold text-orange-600">1年<span class="text-sm">に1回</span></div>
+            <div class="text-xs text-gray-500 mt-1">定期点検（有資格者）</div>
+            <div class="text-xs text-orange-600 mt-1 font-bold">圧縮機電動機 7.5kW以上</div>
+          </div>
+          <div class="bg-white rounded-lg p-3 border border-slate-300 text-center">
+            <div class="font-bold text-gray-700 text-sm mb-1">50 ton-CO₂以上</div>
+            <div class="text-2xl font-bold text-slate-600">3年<span class="text-sm">に1回</span></div>
+            <div class="text-xs text-gray-500 mt-1">定期点検（有資格者）</div>
+            <div class="text-xs text-slate-600 mt-1 font-bold">圧縮機電動機 7.5kW未満</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-500 flex items-start gap-1">
+        <i data-lucide="info" class="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5"></i>
+        福井事業所で使用するほぼすべての業務用エアコンがフロン排出抑制法の管理義務の対象です。新設・更新のたびに充填量を把握し、管理台帳に記録することが求められます。
+      </p>
+    </div>
+
+    <!-- Zone 3: 設置STEPフロー -->
+    <div class="section-card" id="flow">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 bg-sky-100 rounded-xl flex items-center justify-center">
+          <i data-lucide="git-branch" class="w-5 h-5 text-sky-600"></i>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-800">設置・更新の全体フロー（STEP別）</h2>
+          <p class="text-gray-500 text-sm">機器選定から運用開始・廃棄まで</p>
+        </div>
+      </div>
+
+      <div class="space-y-1">
+        <!-- STEP 0 -->
+        <div class="flow-step border-sky-300">
+          <div class="flow-step-header">
+            <div class="flow-num" style="background:#0369a1">0</div>
+            <div class="font-bold text-gray-800">機器の確認（何を設置するか）</div>
+          </div>
+          <div class="text-sm text-gray-600 ml-9 space-y-1">
+            <p>機器選定の段階で以下4点を確認しておくと、後続STEPがスムーズになります。</p>
+            <div class="grid gap-2 md:grid-cols-2 mt-2">
+              <div class="bg-sky-50 rounded-lg p-2">
+                <span class="font-bold text-sky-700">冷媒の種類</span>：フロン系か否か → フロン法の適用有無が決まる
+              </div>
+              <div class="bg-sky-50 rounded-lg p-2">
+                <span class="font-bold text-sky-700">冷凍能力・圧縮機電動機kW</span>：定期点検の頻度が決まる
+              </div>
+              <div class="bg-sky-50 rounded-lg p-2">
+                <span class="font-bold text-sky-700">電気容量（kVA）</span>：電気保安規程の変更要否が決まる
+              </div>
+              <div class="bg-sky-50 rounded-lg p-2">
+                <span class="font-bold text-sky-700">設置場所</span>：危険物エリアなら防爆仕様が必要
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-arrow-down"><i data-lucide="arrow-down" class="w-5 h-5"></i></div>
+
+        <!-- STEP 1 -->
+        <div class="flow-step border-cyan-400 bg-cyan-50">
+          <div class="flow-step-header">
+            <div class="flow-num" style="background:#0891b2">1</div>
+            <div class="font-bold text-gray-800">フロン排出抑制法の確認</div>
+            <span class="step-badge" style="background:#0891b2">最重要</span>
+          </div>
+          <div class="text-sm text-gray-600 ml-9 space-y-1">
+            <p>業務用エアコン（第一種特定製品）であれば必ず対応。</p>
+            <ul class="mt-1 space-y-1">
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-600 flex-shrink-0 mt-0.5"></i>フロン冷媒の種類・充填量（ton-CO₂換算）を確認</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-600 flex-shrink-0 mt-0.5"></i>定期点検の頻度（1年or3年）を把握</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-600 flex-shrink-0 mt-0.5"></i>機器管理台帳へ追加登録の準備</li>
+            </ul>
+          </div>
+          <div class="mt-2 ml-9 text-xs text-gray-500 flex items-center gap-1">
+            <i data-lucide="scale" class="w-3 h-3"></i>
+            根拠: フロン排出抑制法 第16条・第19条
+          </div>
+        </div>
+
+        <div class="flow-arrow-down"><i data-lucide="arrow-down" class="w-5 h-5"></i></div>
+
+        <!-- STEP 2 -->
+        <div class="flow-step border-orange-300">
+          <div class="flow-step-header">
+            <div class="flow-num" style="background:#ea580c">2</div>
+            <div class="font-bold text-gray-800">労働安全衛生法の確認（化学工場特有）</div>
+            <span class="step-badge step-badge-orange">化学工場注意</span>
+          </div>
+          <div class="text-sm text-gray-600 ml-9 space-y-2">
+            <div class="bg-orange-50 rounded-lg p-2 border border-orange-200">
+              <p class="font-bold text-orange-700 text-xs mb-1">⚡ 危険物・有機溶剤エリアへの設置</p>
+              <p>有機溶剤・危険物（乙4類）取扱場所に設置する場合、通常の民生用エアコンは<span class="font-bold text-red-600">法令違反になる可能性</span>があります。防爆構造（Ex仕様）機器の選定が必要です。</p>
+            </div>
+            <div class="bg-yellow-50 rounded-lg p-2 border border-yellow-200">
+              <p class="font-bold text-yellow-700 text-xs mb-1">🌡️ 換気バランスへの影響</p>
+              <p>有機則・特化則に定める換気量をエアコンの気流が妨げていないか確認が必要。局所排気装置の制御風速を乱すと法令違反になります。</p>
+            </div>
+            <ul class="space-y-1">
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-500 flex-shrink-0 mt-0.5"></i>安全管理者・衛生管理者との事前確認</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-500 flex-shrink-0 mt-0.5"></i>衛生委員会での審議（作業環境変更として）</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-500 flex-shrink-0 mt-0.5"></i>設置後に作業環境測定を実施して影響確認</li>
+            </ul>
+          </div>
+          <div class="mt-2 ml-9 text-xs text-gray-500 flex items-center gap-1">
+            <i data-lucide="scale" class="w-3 h-3"></i>
+            根拠: 労働安全衛生法 第65条・有機溶剤中毒予防規則・事務所衛生基準規則 第5条
+          </div>
+        </div>
+
+        <div class="flow-arrow-down"><i data-lucide="arrow-down" class="w-5 h-5"></i></div>
+
+        <!-- STEP 3 -->
+        <div class="flow-step">
+          <div class="flow-step-header">
+            <div class="flow-num">3</div>
+            <div class="font-bold text-gray-800">電気事業法の確認（電気主任技術者）</div>
+          </div>
+          <div class="text-sm text-gray-600 ml-9 space-y-1">
+            <p>受変電設備（高圧受電）がある化学工場では電気主任技術者への確認が必要です。</p>
+            <ul class="mt-1 space-y-1">
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-500 flex-shrink-0 mt-0.5"></i>単線結線図の更新要否</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-500 flex-shrink-0 mt-0.5"></i>保安規程の変更要否（追加容量が想定範囲か）</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-500 flex-shrink-0 mt-0.5"></i>工事計画届出の要否（500kW以上の場合等）</li>
+            </ul>
+          </div>
+          <div class="mt-2 ml-9 text-xs text-gray-500 flex items-center gap-1">
+            <i data-lucide="scale" class="w-3 h-3"></i>
+            根拠: 電気事業法 第42条（保安規程）・第48条（工事計画）
+          </div>
+        </div>
+
+        <div class="flow-arrow-down"><i data-lucide="arrow-down" class="w-5 h-5"></i></div>
+
+        <!-- STEP 4 -->
+        <div class="flow-step">
+          <div class="flow-step-header">
+            <div class="flow-num">4</div>
+            <div class="font-bold text-gray-800">省エネ法の確認（エネルギー管理者）</div>
+          </div>
+          <div class="text-sm text-gray-600 ml-9 space-y-1">
+            <ul class="space-y-1">
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500 flex-shrink-0 mt-0.5"></i>エネルギー管理者へ消費エネルギー量の変化を報告</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500 flex-shrink-0 mt-0.5"></i>毎年7月末の定期報告書に新設・更新機器を反映</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500 flex-shrink-0 mt-0.5"></i>高効率機器（APF値の高い機器）の選定を中長期計画に記載</li>
+            </ul>
+          </div>
+          <div class="mt-2 ml-9 text-xs text-gray-500 flex items-center gap-1">
+            <i data-lucide="scale" class="w-3 h-3"></i>
+            根拠: エネルギーの使用の合理化及び非化石エネルギーへの転換等に関する法律（省エネ法） 第16条
+          </div>
+        </div>
+
+        <div class="flow-arrow-down"><i data-lucide="arrow-down" class="w-5 h-5"></i></div>
+
+        <!-- STEP 5 工事 -->
+        <div class="flow-step border-green-300 bg-green-50">
+          <div class="flow-step-header">
+            <div class="flow-num" style="background:#15803d">5</div>
+            <div class="font-bold text-gray-800">設置工事・フロン充填</div>
+            <span class="step-badge step-badge-green">工事時</span>
+          </div>
+          <div class="text-sm text-gray-600 ml-9 space-y-1">
+            <div class="bg-white rounded-lg p-2 border border-green-200 mb-2">
+              <p class="font-bold text-green-700 text-xs mb-1">フロン充填は必ず有資格業者に</p>
+              <p>フロン類の充填は<span class="font-bold">「第一種フロン類充填回収業者」</span>に依頼しなければなりません。自社での充填は禁止されています。</p>
+            </div>
+            <ul class="space-y-1">
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600 flex-shrink-0 mt-0.5"></i>充填業者から<span class="font-bold">「充填証明書」</span>を受領し、3年間保存する</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600 flex-shrink-0 mt-0.5"></i>電気工事士による配線工事の実施</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600 flex-shrink-0 mt-0.5"></i>建築確認申請（必要な場合のみ）</li>
+            </ul>
+          </div>
+          <div class="mt-2 ml-9 text-xs text-gray-500 flex items-center gap-1">
+            <i data-lucide="scale" class="w-3 h-3"></i>
+            根拠: フロン排出抑制法 第37条・第38条 / 電気工事士法 第3条
+          </div>
+        </div>
+
+        <div class="flow-arrow-down"><i data-lucide="arrow-down" class="w-5 h-5"></i></div>
+
+        <!-- STEP 6 定常管理 -->
+        <div class="flow-step border-cyan-400 bg-cyan-50">
+          <div class="flow-step-header">
+            <div class="flow-num" style="background:#0891b2">6</div>
+            <div class="font-bold text-gray-800">設置後の定常管理（フロン法の管理者義務）</div>
+            <span class="step-badge" style="background:#0891b2">運用中・継続</span>
+          </div>
+          <div class="text-sm text-gray-600 ml-9">
+            <div class="grid gap-2 md:grid-cols-3 mt-1">
+              <div class="bg-white rounded-lg p-2 border border-cyan-200 text-center">
+                <div class="font-bold text-cyan-700 text-xs mb-1">3ヶ月に1回</div>
+                <div class="text-xs text-gray-600">簡易点検（目視）<br>異音・霜付き・油汚れ等</div>
+              </div>
+              <div class="bg-white rounded-lg p-2 border border-cyan-200 text-center">
+                <div class="font-bold text-cyan-700 text-xs mb-1">1年または3年に1回</div>
+                <div class="text-xs text-gray-600">定期点検（有資格者）<br>専門業者に委託可</div>
+              </div>
+              <div class="bg-white rounded-lg p-2 border border-cyan-200 text-center">
+                <div class="font-bold text-cyan-700 text-xs mb-1">随時</div>
+                <div class="text-xs text-gray-600">点検記録簿の整備<br>漏洩時の即時修理</div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-2 ml-9 text-xs text-gray-500 flex items-center gap-1">
+            <i data-lucide="scale" class="w-3 h-3"></i>
+            根拠: フロン排出抑制法 第16条・第19条
+          </div>
+        </div>
+
+        <div class="flow-arrow-down"><i data-lucide="arrow-down" class="w-5 h-5"></i></div>
+
+        <!-- STEP 7 廃棄 -->
+        <div class="flow-step border-red-300 bg-red-50">
+          <div class="flow-step-header">
+            <div class="flow-num" style="background:#dc2626">7</div>
+            <div class="font-bold text-gray-800">廃棄・更新時のフロン回収</div>
+            <span class="step-badge" style="background:#dc2626">廃棄時 必須</span>
+          </div>
+          <div class="text-sm text-gray-600 ml-9 space-y-1">
+            <p>機器を廃棄・更新するときはフロンを大気中に放出してはなりません。</p>
+            <ul class="mt-1 space-y-1">
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-red-500 flex-shrink-0 mt-0.5"></i>フロン回収を<span class="font-bold">「第一種フロン類充填回収業者」</span>に依頼</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-red-500 flex-shrink-0 mt-0.5"></i><span class="font-bold">「引取証明書」</span>を受領し、3年間保存する</li>
+              <li class="flex items-start gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-red-500 flex-shrink-0 mt-0.5"></i>廃棄物処理法に基づく機器本体の廃棄</li>
+            </ul>
+          </div>
+          <div class="mt-2 ml-9 text-xs text-gray-500 flex items-center gap-1">
+            <i data-lucide="scale" class="w-3 h-3"></i>
+            根拠: フロン排出抑制法 第45条・第46条
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 用語解説：簡易点検・定期点検・第一種フロン類充填回収業者 -->
+    <div class="term-explain">
+      <div class="flex items-start gap-3">
+        <i data-lucide="lightbulb" class="w-6 h-6 text-purple-500 flex-shrink-0 mt-0.5"></i>
+        <div>
+          <div class="term-word text-lg font-bold">「簡易点検」「定期点検」「第一種フロン類充填回収業者」とは？</div>
+          <div class="mt-2 text-gray-700 text-sm space-y-2">
+            <div>
+              <span class="font-bold text-purple-700">簡易点検</span>：機器の外側を目で見て確認する点検。異音・振動・霜の異常付着・油汚れ（フロン漏洩のサイン）がないかを管理者自身が確認する。3ヶ月に1回が義務。
+            </div>
+            <div>
+              <span class="font-bold text-purple-700">定期点検</span>：専門の資格者が機器内部まで詳しく確認する点検。管理者自身では実施できず、有資格者または登録業者への委託が必要。
+            </div>
+            <div>
+              <span class="font-bold text-purple-700">第一種フロン類充填回収業者</span>：都道府県知事に登録されたフロン専門業者。フロンの充填（機器への注入）も回収（機器からの取り出し）も、この資格を持つ業者にしか依頼できない。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zone 4: 会社の義務 -->
+    <div class="section-card" id="obligation">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center">
+          <i data-lucide="clipboard-list" class="w-5 h-5 text-red-600"></i>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-800">会社がしなければならないこと（義務一覧）</h2>
+          <p class="text-gray-500 text-sm">フェーズ別に整理</p>
+        </div>
+      </div>
+
+      <!-- 設置前 -->
+      <div class="mb-2">
+        <span class="bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200">設置・更新前</span>
+      </div>
+      <div class="space-y-3 mb-5">
+        <div class="obligation-card">
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+            <span class="font-bold text-gray-800">機器の種別・フロン充填量を確認する</span>
+            <span class="badge-required">都度</span>
+          </div>
+          <p class="text-gray-600 text-sm ml-9">業務用（第一種特定製品）か否か、フロン冷媒の種類と充填量（kg）をメーカーから取得し、ton-CO₂換算で把握する。</p>
+          <p class="text-xs text-gray-400 ml-9 mt-1">フロン排出抑制法 第16条</p>
+        </div>
+
+        <div class="obligation-card-orange">
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <div class="w-7 h-7 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style="background:#ea580c">2</div>
+            <span class="font-bold text-gray-800">危険物エリアでは防爆仕様機器を選定する</span>
+            <span class="badge-new">危険物エリアのみ</span>
+          </div>
+          <p class="text-gray-600 text-sm ml-9">有機溶剤・危険物（乙4類）取扱場所への設置は、電気機械器具防爆構造規格に適合した機器を選定しなければならない。通常の民生用機器は設置不可。</p>
+          <p class="text-xs text-gray-400 ml-9 mt-1">労働安全衛生法 第44条の2 / 電気機械器具防爆構造規格（労働省告示）</p>
+        </div>
+
+        <div class="obligation-card-amber">
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <div class="w-7 h-7 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style="background:#b45309">3</div>
+            <span class="font-bold text-gray-800">換気量・作業環境への影響を確認する</span>
+            <span class="badge-conditional">有害物取扱場所のみ</span>
+          </div>
+          <p class="text-gray-600 text-sm ml-9">有機則・特化則に定める必要換気量をエアコンの気流が妨げないか、衛生管理者と作業主任者が事前確認する。設置後は作業環境測定で影響を確認する。</p>
+          <p class="text-xs text-gray-400 ml-9 mt-1">有機溶剤中毒予防規則 第16条 / 特定化学物質障害予防規則 第5条</p>
+        </div>
+
+        <div class="obligation-card">
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
+            <span class="font-bold text-gray-800">電気保安規程・単線結線図の変更要否を確認する</span>
+            <span class="badge-conditional">変更が生じる場合</span>
+          </div>
+          <p class="text-gray-600 text-sm ml-9">電気主任技術者に確認し、既存の保安規程の想定範囲を超える場合は保安規程の変更・届出が必要。</p>
+          <p class="text-xs text-gray-400 ml-9 mt-1">電気事業法 第42条</p>
+        </div>
+
+        <div class="obligation-card-green">
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <div class="w-7 h-7 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">5</div>
+            <span class="font-bold text-gray-800">エネルギー管理者へ事前報告する</span>
+            <span class="badge-required">都度</span>
+          </div>
+          <p class="text-gray-600 text-sm ml-9">消費エネルギーが変化するため、エネルギー管理者への報告と定期報告書反映の準備を行う。</p>
+          <p class="text-xs text-gray-400 ml-9 mt-1">省エネ法 第16条</p>
+        </div>
+      </div>
+
+      <!-- 工事時 -->
+      <div class="mb-2">
+        <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full border border-green-200">設置工事時</span>
+      </div>
+      <div class="space-y-3 mb-5">
+        <div class="obligation-card">
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">6</div>
+            <span class="font-bold text-gray-800">フロン充填を第一種フロン類充填回収業者に依頼する</span>
+            <span class="badge-required">義務</span>
+          </div>
+          <p class="text-gray-600 text-sm ml-9">都道府県知事登録の充填回収業者に作業を依頼すること。自社でのフロン充填は禁止。</p>
+          <p class="text-xs text-gray-400 ml-9 mt-1">フロン排出抑制法 第37条・第38条</p>
+        </div>
+
+        <div class="obligation-card">
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">7</div>
+            <span class="font-bold text-gray-800">充填証明書を受領・保存する（3年間）</span>
+            <span class="badge-required">義務</span>
+          </div>
+          <p class="text-gray-600 text-sm ml-9">充填業者から交付される「充填証明書」を受け取り、3年間保存しなければなら
